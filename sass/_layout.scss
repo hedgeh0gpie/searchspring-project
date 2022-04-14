@@ -3,7 +3,6 @@
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
-
   min-height: 50rem;
 }
 
@@ -12,25 +11,17 @@
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .content {
-  display: flex;
-}
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
-.sidebar {
-  background-color: var(--color-grey-dark-1);
-
-  flex: 0 0 18%;
-}
-
-.product-view {
-  background-color: orangered;
-
-  flex: 1;
-
+  & > * {
+    padding: 40px;
+    font-size: 3rem;
+  }
 }

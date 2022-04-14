@@ -114,3 +114,80 @@
     align-items: center;
   }
 }
+
+////////////////////////////////////
+// PRODUCTS
+.product-view {
+  grid-column: center-start / center-end;
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+}
+
+.product {
+  background-color: #f9f7f6;
+
+  display: grid;
+  grid-row-gap: 3.5rem;
+
+  &__img {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    z-index: 1;
+  }
+
+  &__name {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: end;
+    z-index: 3;
+
+    width: 80%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 400;
+    transform: translateY(50%);
+
+
+  }
+
+  &__price {
+    margin-top: 1rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+
+    svg {
+      fill: var(--color-primary);
+      height: 2rem;
+      width: 2rem;
+    }
+
+  }
+
+  &__btn {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: var(--color-primary-light);
+    }
+  }
+
+
+}
