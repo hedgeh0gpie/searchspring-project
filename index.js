@@ -103,7 +103,6 @@ const search = (page) => {
                 </div>`
 
 
-
             let navTemplate =
                 `<div class="pagination__prev-box">
                     <svg class="pagination__prev">
@@ -164,15 +163,25 @@ const search = (page) => {
             })
 
 
-
-
             data.results.map(product => {
+                const priceHandler = () => {
+                    if (product.msrp > product.price) {
+                        return `<div class="product__price">
+                                    <p class="product__price--msrp">$${product.msrp}</p>
+                                    <p class="product__price--price">$${product.price}</p>
+                                </div>`
+
+                    } else {
+                        return `<div class="product__price">
+                                    <p class="product__price--price">$${product.price}</p>
+                                </div>`
+                    }
+                }
+
                 const productCard = `<div class="product">
                 <img src=${product.imageUrl} alt="" class="product__img">
                     <h5 class="product__name">${product.name}</h5>
-                    <div class="product__price">
-                        <p>$${product.price}</p>
-                    </div>
+                    ${priceHandler()}
                     <button class="btn product__btn">Add To Cart</button>
             </div>`
 
