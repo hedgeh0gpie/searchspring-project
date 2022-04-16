@@ -1,15 +1,11 @@
 "use strict";
 
 const productView = document.querySelector('.product-view');
-
-const pagination = document.querySelector('.pagination')
-
+const paginationTop = document.querySelector('.pagination__top')
+const paginationBottom = document.querySelector('.pagination__bottom')
 const searchBar = document.querySelector('.search__input');
-
 const searchButton = document.querySelector('.search__button');
-
 const cart = document.querySelector('.user-nav__icon-box');
-
 const cartQuantityBadge = `<span class="user-nav__notification"></span>`;
 
 let cartQuantity = 0;
@@ -86,6 +82,18 @@ const search = (page) => {
                     <div class="pagination__page-box" onclick="search(${data.pagination.currentPage})">
                         <span class="pagination__page pagination__page-current">${data.pagination.currentPage}</span>
                     </div>
+                    <div class="pagination__page-box" style="visibility: hidden">
+                        <span class="pagination__page">${pageHandler(1)}</span>
+                    </div>
+                    <div class="pagination__page-box" style="visibility: hidden">
+                        <span class="pagination__page">${pageHandler(2)}</span>
+                    </div>
+                    <div class="pagination__page-box" style="visibility: hidden">
+                        <span class="pagination__page">${pageHandler(3)}</span>
+                    </div>
+                    <div class="pagination__page-box" style="visibility: hidden">
+                        <span class="pagination__page">${pageHandler(4)}</span>
+                    </div>
                 </div>
 
                 <div class="pagination__next-box" style="visibility: hidden">
@@ -93,7 +101,6 @@ const search = (page) => {
                         <use xlink:href="img/sprite.svg#icon-chevron-small-right"></use>
                     </svg>
                 </div>`
-
 
 
 
@@ -130,24 +137,33 @@ const search = (page) => {
 
 
             if (data.pagination.currentPage === 1) {
-                pagination.innerHTML = firstPageNavTemplate;
+                paginationTop.innerHTML = firstPageNavTemplate;
+                paginationBottom.innerHTML = firstPageNavTemplate;
             } else if (data.pagination.currentPage === data.pagination.totalPages) {
-                pagination.innerHTML = lastPageNavTemplate;
+                paginationTop.innerHTML = lastPageNavTemplate;
+                paginationBottom.innerHTML = lastPageNavTemplate;
             } else {
-                pagination.innerHTML = navTemplate;
+                paginationTop.innerHTML = navTemplate;
+                paginationBottom.innerHTML = navTemplate;
             }
 
 
-            let prevBtn = document.querySelector('.pagination__prev-box');
-            let nextBtn = document.querySelector('.pagination__next-box');
+            let prevBtnList = document.querySelectorAll('.pagination__prev-box');
+            let nextBtnList = document.querySelectorAll('.pagination__next-box');
 
-            prevBtn.addEventListener('click', () => {
-                search(data.pagination.currentPage - 1)
+            prevBtnList.forEach(prevBtn => {
+                prevBtn.addEventListener('click', () => {
+                    search(data.pagination.currentPage - 1)
+                })
             })
 
-            nextBtn.addEventListener('click', () => {
-                search(data.pagination.currentPage + 1)
+            nextBtnList.forEach(nextBtn => {
+                nextBtn.addEventListener('click', () => {
+                    search(data.pagination.currentPage + 1)
+                })
             })
+
+
 
 
             data.results.map(product => {
