@@ -1,6 +1,6 @@
 # Searchspring Project
 
-This is a front-end built with HTML, CSS/Sass, and JavaScript. It uses the *Searchspring API* to power the product search feature.
+This is a front-end application built with HTML, CSS/Sass, and JavaScript. It uses the *Searchspring API* to power the product search feature.
 <br>
 
 ## Getting Started
