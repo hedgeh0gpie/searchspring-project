@@ -9,6 +9,7 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --shadow-light: 1rem 1.5rem 2rem rgba(0, 0, 0, .1);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
 }
 
@@ -222,6 +223,7 @@ body {
 
 .product {
   background-color: #f9f7f6;
+  box-shadow: var(--shadow-light);
   display: grid;
   grid-row-gap: 3.5rem;
 }
@@ -252,11 +254,14 @@ body {
   font-size: 2rem;
   display: flex;
   justify-content: center;
+  color: var(--color-grey-dark-1);
 }
-.product__price svg {
-  fill: var(--color-primary);
-  height: 2rem;
-  width: 2rem;
+.product__price--msrp, .product__price--price {
+  margin: 0 0.5rem;
+}
+.product__price--msrp {
+  color: var(--color-grey-light-4);
+  text-decoration: line-through;
 }
 .product__btn {
   background-color: var(--color-primary);
