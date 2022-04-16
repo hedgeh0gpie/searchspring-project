@@ -237,11 +237,16 @@
     font-size: 2rem;
     display: flex;
     justify-content: center;
+    color: var(--color-grey-dark-1);
 
-    svg {
-      fill: var(--color-primary);
-      height: 2rem;
-      width: 2rem;
+    &--msrp,
+    &--price {
+      margin: 0 .5rem;
+    }
+
+    &--msrp {
+      color: var(--color-grey-light-4);
+      text-decoration: line-through;
     }
 
   }

@@ -212,11 +212,13 @@ body {
     margin-top: 1rem;
     font-size: 2rem;
     display: flex;
-    justify-content: center; }
-    .product__price svg {
-      fill: var(--color-primary);
-      height: 2rem;
-      width: 2rem; }
+    justify-content: center;
+    color: var(--color-grey-dark-1); }
+    .product__price--msrp, .product__price--price {
+      margin: 0 .5rem; }
+    .product__price--msrp {
+      color: var(--color-grey-light-4);
+      text-decoration: line-through; }
   .product__btn {
     background-color: var(--color-primary);
     color: #fff;
