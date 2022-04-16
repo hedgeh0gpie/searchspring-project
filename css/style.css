@@ -50,18 +50,21 @@ body {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .content > * {
-    padding: 40px;
+    padding: 3rem;
     font-size: 3rem; }
 
 .logo {
-  height: 3.25rem;
-  margin-left: 2rem; }
+  height: 5rem;
+  width: 5rem;
+  margin-left: 1.8rem;
+  transform: scale(0.65); }
 
 .search {
   flex: 0 0 40%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-right: 2rem; }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -128,9 +131,52 @@ body {
     justify-content: center;
     align-items: center; }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  grid-column: center-start / center-end;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+  font-size: 2rem;
+  justify-content: center; }
+  .pagination > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .pagination__prev-box:hover, .pagination__next-box:hover, .pagination__page-box:hover {
+    background-color: var(--color-grey-light-2); }
+  .pagination__prev-box, .pagination__next-box {
+    display: flex;
+    align-items: center;
+    position: relative; }
+  .pagination__prev, .pagination__next {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2); }
+  .pagination__page-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 2rem; }
+  .pagination__page {
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    color: var(--color-grey-dark-2); }
+    .pagination__page-current {
+      color: var(--color-primary); }
+  .pagination__pages {
+    justify-content: space-between;
+    align-items: center; }
+
 .product-view {
   grid-column: center-start / center-end;
-  margin: 5rem 0;
+  margin: 0 0 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem; }

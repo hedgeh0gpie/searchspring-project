@@ -2,8 +2,10 @@
 // LOGO
 
 .logo {
-  height: 3.25rem;
-  margin-left: 2rem;
+  height: 5rem;
+  width: 5rem;
+  margin-left: 1.8rem;
+  transform: scale(0.65);
 }
 
 ////////////////////////////////////
@@ -14,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-right: 2rem;
 
   &__input {
     font-family: inherit;
@@ -116,10 +120,87 @@
 }
 
 ////////////////////////////////////
+// PAGINATION
+.pagination {
+  //align-self: stretch;
+
+  display: flex;
+  align-items: center;
+
+  grid-column: center-start / center-end;
+  //display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+
+  font-size: 2rem;
+  //height: 7rem;
+  justify-content: center;
+
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__prev-box:hover,
+  &__next-box:hover,
+  &__page-box:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
+
+  &__prev-box,
+  &__next-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__prev,
+  &__next {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2);
+  }
+
+  &__page-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 2rem;
+  }
+
+  &__page {
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    color: var(--color-grey-dark-2);
+
+    &-current {
+      color: var(--color-primary);
+    }
+  }
+
+  &__pages {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+}
+
+////////////////////////////////////
 // PRODUCTS
 .product-view {
   grid-column: center-start / center-end;
-  margin: 5rem 0;
+  //margin: 5rem 0;
+  margin: 0 0 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;

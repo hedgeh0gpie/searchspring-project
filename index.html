@@ -1,102 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>Searchspring Project</title>
-    </head>
-    <body>
-        <div class="container">
-	        <header class="header">
-		        <img src="" alt="logo" class="logo">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		        <form action="#" class="search">
-			        <input type="text" class="search__input" placeholder="Search products">
-			        <button class="search__button">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+		<title>Searchspring Project</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+
+				<div class="logo">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="#eb2f64">
+						<path d="M10.2 11c-.1.1-.2.1-.4.2-6.3 3-8.3 11.7-4.6 19.4l22.7-11c.1-.1.3-.1.4-.2 6.3-3 8.3-11.7 4.6-19.4L10.2 11zM6.8 33.4c-.1.1-.2.1-.4.2-6.3 3-8.3 11.7-4.6 19.4l22.7-11c.1-.1.3-.1.4-.2 6.3-3 8.3-11.7 4.6-19.4l-22.7 11z"></path>
+					</svg>
+				</div>
+
+
+
+				<form action="#" class="search">
+					<input type="text" class="search__input" placeholder="Search products">
+					<button class="search__button">
 						<svg class="search__icon">
 							<use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
 						</svg>
-			        </button>
-		        </form>
+					</button>
+				</form>
 
-		        <nav class="user-nav">
-			        <div class="user-nav__icon-box">
-				        <svg class="user-nav__icon">
-					        <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
-				        </svg>
-<!-- 				        <span class="user-nav__notification">7</span> -->
-			        </div>
-		        </nav>
-	        </header>
-
-
-	        <div class="content">
-
-		        <main class="product-view">
-<!-- 			        <div class="product"> -->
-<!-- 				        <img src="img/product-demo.jpg" alt="" class="product__img"> -->
-<!-- 				        <h5 class="product__name">Snazzy Chanklas</h5> -->
-<!-- 				        <div class="product__price"> -->
-<!-- 							<p>$19.99</p> -->
-<!-- 				        </div> -->
-<!-- 				        <button class="btn product__btn">Add To Cart</button> -->
-<!-- 			        </div> -->
-
-<!-- 			        <div class="product"> -->
-<!-- 				        <img src="img/product-demo.jpg" alt="" class="product__img"> -->
-<!-- 				        <h5 class="product__name">Snazzy Chanklas</h5> -->
-<!-- 				        <div class="product__price"> -->
-<!-- 					        <p>$19.99</p> -->
-<!-- 				        </div> -->
-<!-- 				        <button class="btn product__btn">Add To Cart</button> -->
-<!-- 			        </div> -->
-
-<!-- 			        <div class="product"> -->
-<!-- 				        <img src="img/product-demo.jpg" alt="" class="product__img"> -->
-<!-- 				        <h5 class="product__name">Snazzy Chanklas</h5> -->
-<!-- 				        <div class="product__price"> -->
-<!-- 					        <p>$19.99</p> -->
-<!-- 				        </div> -->
-<!-- 				        <button class="btn product__btn">Add To Cart</button> -->
-<!-- 			        </div> -->
-
-<!-- 			        <div class="product"> -->
-<!-- 				        <img src="img/product-demo.jpg" alt="" class="product__img"> -->
-<!-- 				        <h5 class="product__name">Snazzy Chanklas</h5> -->
-<!-- 				        <div class="product__price"> -->
-<!-- 					        <p>$19.99</p> -->
-<!-- 				        </div> -->
-<!-- 				        <button class="btn product__btn">Add To Cart</button> -->
-<!-- 			        </div> -->
-
-<!-- 			        <div class="product"> -->
-<!-- 				        <img src="img/product-demo.jpg" alt="" class="product__img"> -->
-<!-- 				        <h5 class="product__name">Snazzy Chanklas</h5> -->
-<!-- 				        <div class="product__price"> -->
-<!-- 					        <p>$19.99</p> -->
-<!-- 				        </div> -->
-<!-- 				        <button class="btn product__btn">Add To Cart</button> -->
-<!-- 			        </div> -->
-
-<!-- 			        <div class="product"> -->
-<!-- 				        <img src="img/product-demo.jpg" alt="" class="product__img"> -->
-<!-- 				        <h5 class="product__name">Snazzy Chanklas</h5> -->
-<!-- 				        <div class="product__price"> -->
-<!-- 					        <p>$19.99</p> -->
-<!-- 				        </div> -->
-<!-- 				        <button class="btn product__btn">Add To Cart</button> -->
-<!-- 			        </div> -->
+				<nav class="user-nav">
+					<div class="user-nav__icon-box">
+						<svg class="user-nav__icon">
+							<use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+						</svg>
+					</div>
+				</nav>
+			</header>
 
 
-		        </main>
-	        </div>
-        </div>
+			<div class="content">
+				<div class="pagination"></div>
+				<main class="product-view"></main>
+			</div>
+		</div>
 
-	    <script defer src="index.js"></script>
-    </body>
+		<script defer src="index.js"></script>
+	</body>
 </html>
