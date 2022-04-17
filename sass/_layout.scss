@@ -5,6 +5,12 @@
   box-shadow: var(--shadow-dark);
   min-height: 90rem;
   //min-height: 80vh;
+
+  @media only screen and (max-width: 37.5em) {
+    margin: revert;
+  }
+
+
 }
 
 .header {
@@ -20,6 +26,10 @@
 .content {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: 37.5em) {
+    grid-template-columns: [full-start] 1rem [center-start] repeat(8, [col-start] minmax(1rem, 14rem) [col-end]) [center-end] 1rem [full-end];
+  }
 
   & > * {
     padding: 3rem;

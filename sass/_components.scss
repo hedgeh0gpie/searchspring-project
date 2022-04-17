@@ -95,8 +95,8 @@
   }
 
   &__icon {
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 2.75rem;
+    width: 2.75rem;
     fill: var(--color-grey-dark-2);
   }
 
@@ -123,13 +123,30 @@
   display: flex;
   align-items: center;
   grid-column: center-start / center-end;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 1rem;
   font-size: 2rem;
   justify-content: center;
 
+
+
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 1.6rem;
+  }
+
+  &__top {
+    @media only screen and (max-width: 37.5em) {
+      padding-bottom: 0;
+    }
+  }
+
   &__bottom {
     margin-bottom: 3rem;
+
+    @media only screen and (max-width: 37.5em) {
+      margin-bottom: 0;
+      padding-top: 0;
+    }
   }
 
   & > * {
@@ -152,6 +169,10 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @media only screen and (max-width: 37.5em) {
+      padding: 0 .7rem;
+    }
   }
 
   &__prev,
@@ -167,6 +188,11 @@
     justify-content: center;
     position: relative;
     margin: 0 2rem;
+
+    @media only screen and (max-width: 37.5em) {
+      margin: 0 .8rem;
+    }
+
   }
 
   &__page {
@@ -185,6 +211,9 @@
   &__pages {
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 37.5em) {
+      padding: 0;
+    }
   }
 
 }
@@ -194,6 +223,7 @@
 .product-view {
   grid-column: center-start / center-end;
   margin: 0 0 0 0;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
@@ -204,9 +234,12 @@
   box-shadow: var(--shadow-light);
   display: grid;
   grid-row-gap: 3.5rem;
+  max-height: 100%;
+  max-width: 100%;
 
   &__img {
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
     z-index: 1;
@@ -262,6 +295,8 @@
     padding: 1.8rem 3rem;
     cursor: pointer;
     transition: all .2s;
+    max-height: 100%;
+    max-width: 100%;
 
     &:hover {
       background-color: var(--color-primary-light);
