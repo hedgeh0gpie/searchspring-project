@@ -22,7 +22,7 @@ const search = (page) => {
     let filter = searchBar.value.toLowerCase();
     productView.innerHTML = '';
 
-    fetch(`http://api.searchspring.net/api/search/search.json?siteId=scmq7n&q=${filter}&resultsFormat=native&page=${page}`)
+    fetch(`https://api.searchspring.net/api/search/search.json?siteId=scmq7n&q=${filter}&resultsFormat=native&page=${page}`)
         .then(response => response.json())
         .then(data => {
 
